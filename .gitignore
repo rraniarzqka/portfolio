@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Local Claude Code config (machine-specific: dev-server + permissions)
+.claude/launch.json
+.claude/settings.local.json
+
+# Editor/OS cruft
+*.swp
+Thumbs.db
