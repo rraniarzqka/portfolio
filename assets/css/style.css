@@ -760,77 +760,100 @@ a { color: inherit; }
 .contact-panel {
   background: var(--peri-soft);
   border-radius: var(--radius-lg);
-  padding: clamp(40px, 6vw, 72px);
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: clamp(32px, 5vw, 64px);
+  padding: clamp(40px, 6vw, 76px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(22px, 3.2vw, 32px);
   position: relative;
   overflow: hidden;
 }
+/* soft closing accent, low and to the side so it reads as depth, not decoration */
 .contact-panel::after {
   content: "";
   position: absolute;
-  width: 220px; height: 220px;
+  width: 300px; height: 300px;
   border-radius: 50%;
-  background: rgba(248, 220, 110, 0.5);
-  right: -60px; top: -80px;
+  background: rgba(248, 220, 110, 0.42);
+  right: -90px; bottom: -120px;
+  pointer-events: none;
 }
+.contact-head {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.contact-head .eyebrow { margin: 0; }
+.contact-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  color: var(--evergreen);
+  background: var(--paper);
+  border-radius: 999px;
+  padding: 8px 15px 8px 13px;
+}
+.status-dot {
+  position: relative;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: #4E9E7A;
+  flex: none;
+}
+.status-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: inherit;
+  animation: statusPulse 2.4s ease-out infinite;
+}
+@keyframes statusPulse {
+  0%   { transform: scale(1); opacity: 0.5; }
+  70%, 100% { transform: scale(2.8); opacity: 0; }
+}
+
 .contact-copy {
   display: flex;
   flex-direction: column;
   gap: 16px;
   position: relative;
   z-index: 1;
+  max-width: 52ch;
 }
-.contact-copy h2 { font-size: clamp(28px, 3.6vw, 40px); }
-.contact-copy p { color: var(--ink); opacity: 0.75; max-width: 44ch; }
-.contact-note {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-display);
-  font-size: 14px;
-  font-weight: 700;
-  margin-top: 8px;
-}
-.contact-note .pulse {
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  background: var(--evergreen);
-}
+.contact-copy h2 { font-size: clamp(30px, 4.4vw, 46px); letter-spacing: -0.02em; }
+.contact-copy p { color: var(--ink); opacity: 0.75; max-width: 46ch; }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.contact-actions {
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 640px;
+  margin-top: 6px;
 }
-.contact-form label {
-  font-family: var(--font-display);
-  font-size: 13.5px;
-  font-weight: 800;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
+.contact-actions .btn { width: 100%; justify-content: center; }
+.btn-outline {
+  background: transparent;
+  color: var(--evergreen);
+  border: 1.5px solid rgba(18, 56, 43, 0.28);
 }
-.contact-form input,
-.contact-form textarea {
-  font-family: var(--font-body);
-  font-size: 15.5px;
-  padding: 13px 16px;
-  border-radius: 12px;
-  border: 1.5px solid transparent;
-  background: var(--paper);
-  color: var(--ink);
-  resize: vertical;
-}
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
+.btn-outline:hover {
   border-color: var(--evergreen);
+  background: rgba(18, 56, 43, 0.05);
 }
-.contact-form .btn { margin-top: 6px; align-self: flex-start; }
+
+@media (prefers-reduced-motion: reduce) {
+  .status-dot::after { animation: none; }
+}
 
 /* ---------- footer ---------- */
 .footer {
@@ -1218,13 +1241,13 @@ a { color: inherit; }
   .work-metric { justify-self: start; }
   .about-grid { grid-template-columns: 1fr; }
   .about-figure { max-width: 260px; }
-  .contact-panel { grid-template-columns: 1fr; }
   .highlight-grid { grid-template-columns: 1fr; }
   .result-grid { grid-template-columns: 1fr 1fr; }
   .next-name { max-width: none; }
 }
 
 @media (max-width: 700px) {
+  .contact-actions { grid-template-columns: 1fr; max-width: 360px; }
   .nav-links {
     position: absolute;
     top: 100%;
