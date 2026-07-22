@@ -758,7 +758,8 @@ a { color: inherit; }
 
 /* ---------- contact ---------- */
 .contact-panel {
-  background: var(--peri-soft);
+  background: var(--paper);
+  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: clamp(40px, 6vw, 76px);
   display: flex;
@@ -796,7 +797,8 @@ a { color: inherit; }
   font-size: 12.5px;
   letter-spacing: 0.04em;
   color: var(--evergreen);
-  background: var(--paper);
+  background: var(--cream);
+  border: 1px solid var(--line);
   border-radius: 999px;
   padding: 8px 15px 8px 13px;
 }
