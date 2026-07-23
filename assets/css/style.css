@@ -355,15 +355,29 @@ a { color: inherit; }
 /* ---------- sections ---------- */
 .section { padding: clamp(64px, 9vw, 110px) 0 0; }
 
-.sec-header {
-  max-width: 620px;
-  margin-bottom: 44px;
+/* editorial asymmetric section lead — top hairline transition */
+.sec-lead {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: clamp(20px, 4vw, 60px);
+  align-items: end;
+  border-top: 1px solid var(--line);
+  padding-top: clamp(22px, 3vw, 34px);
+  margin-bottom: clamp(30px, 4vw, 48px);
 }
-.sec-header h2 {
+.sec-lead-main h2 {
   font-size: clamp(28px, 3.8vw, 42px);
-  margin: 14px 0 14px;
+  margin-top: 14px;
 }
-.sec-header p { color: var(--ink-soft); font-size: 17.5px; }
+.sec-lead-note {
+  color: var(--ink-soft);
+  font-size: 16.5px;
+  max-width: 38ch;
+  padding-bottom: 6px;
+}
+@media (max-width: 760px) {
+  .sec-lead { grid-template-columns: 1fr; align-items: start; gap: 14px; }
+}
 
 /* ---------- bento ---------- */
 .bento {
@@ -746,19 +760,36 @@ a { color: inherit; }
   background: var(--butter);
   right: 0; bottom: 6%;
 }
-.about-copy { display: flex; flex-direction: column; gap: 18px; }
+.about-copy { display: flex; flex-direction: column; gap: 16px; }
 .about-copy h2 { font-size: clamp(28px, 3.4vw, 38px); }
 .about-copy p { color: var(--ink-soft); max-width: 58ch; }
-.chips { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 6px; }
+.about-lead {
+  font-size: clamp(19px, 1.9vw, 23px);
+  line-height: 1.5;
+  color: var(--ink) !important;
+  letter-spacing: -0.01em;
+}
+/* skills as a quiet hairline strip, not a wall of filled pills */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin-top: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
 .chip {
   font-family: var(--font-display);
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 700;
-  padding: 7px 15px;
-  border-radius: 999px;
-  background: var(--paper);
+  padding: 6px 13px;
+  border-radius: 8px;
+  background: transparent;
   border: 1px solid var(--line);
+  color: var(--ink-soft);
+  transition: color 160ms ease, border-color 160ms ease;
 }
+.chip:hover { color: var(--evergreen); border-color: var(--evergreen); }
 
 /* ---------- contact ---------- */
 .contact-panel {
