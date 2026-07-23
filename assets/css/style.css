@@ -2096,3 +2096,56 @@ p.case-callout {
 @media (max-width: 700px) {
   .case .nav-links { background: var(--cr-offwhite); border-bottom: 2px solid var(--cr-ink); }
 }
+
+/* ---- case background: subtle paper texture + margin accents ---- */
+.case {
+  background-color: var(--cr-offwhite);
+  background-image: radial-gradient(rgba(28, 26, 23, 0.05) 1.5px, transparent 1.6px);
+  background-size: 22px 22px;
+}
+/* the reading column and cards sit cleanly on top; dots read only in the
+   empty gutters and behind the airy text sections */
+.case .case-hero,
+.case .snap-card,
+.case .case-stage,
+.case .show-card,
+.case .highlight,
+.case .result-cell,
+.case .camp-stage,
+.case .case-next-panel { background-clip: padding-box; }
+
+/* soft candy shapes in the wide desktop side-gutters (never over text) */
+@media (min-width: 1140px) {
+  .case .case-section { position: relative; }
+  .case .case-section::before,
+  .case .case-section::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    border: 2px solid var(--cr-ink);
+    opacity: 0.5;
+  }
+  .case .case-section:nth-of-type(2)::before {
+    width: 96px; height: 96px; border-radius: 50%;
+    background: var(--cr-purple); left: -152px; top: 40px;
+  }
+  .case .case-section:nth-of-type(3)::after {
+    width: 60px; height: 60px; border-radius: 50%;
+    background: var(--cr-chartreuse); right: -142px; top: 20px;
+  }
+  .case .case-section:nth-of-type(4)::before {
+    width: 54px; height: 22px; border-radius: 999px;
+    background: var(--cr-orange); left: -150px; top: 90px; transform: rotate(-16deg);
+  }
+  .case .case-section:nth-of-type(5)::after {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: var(--cr-pink); right: -150px; top: 60px;
+  }
+  .case .case-section:nth-of-type(6)::before {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--cr-yellow); left: -132px; top: 40px;
+  }
+  /* keep the shapes strictly decorative — text stays above them */
+  .case .case-section > * { position: relative; z-index: 1; }
+}
