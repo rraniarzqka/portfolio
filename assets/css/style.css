@@ -1061,6 +1061,7 @@ a { color: inherit; }
 .case-stage:nth-child(1) .num { background: var(--peri-soft); }
 .case-stage:nth-child(2) .num { background: var(--butter-soft); }
 .case-stage:nth-child(3) .num { background: #DCE9DF; }
+.case-stage:nth-child(4) .num { background: var(--peri-soft); }
 .case-stage h3 { font-size: 17px; margin-bottom: 4px; }
 .case-stage p { font-size: 15px; color: var(--ink-soft); }
 
