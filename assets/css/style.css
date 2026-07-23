@@ -464,9 +464,13 @@ a { color: inherit; }
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: clamp(24px, 4vw, 48px);
-  align-items: center;
+  align-items: stretch;
 }
+/* consistent placement across every project slide: content top-aligned,
+   CTA anchored to the bottom, metrics top-aligned */
 .car-brand { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.car-brand .car-link { margin-top: auto; }
+.car-metrics { align-self: start; }
 .car-tag {
   font-family: var(--font-display);
   font-size: 12.5px;
@@ -1168,8 +1172,8 @@ a { color: inherit; }
   overflow: hidden;
   max-width: calc(var(--container) + 48px);
   margin: 0 auto;
-  background: var(--peri-soft);
-  border: 1px solid transparent;
+  background: var(--paper);
+  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: clamp(32px, 4.5vw, 56px);
   display: grid;
@@ -1184,30 +1188,25 @@ a { color: inherit; }
 .case-next-panel:hover,
 .case-next-panel:focus-visible {
   transform: translateY(-4px);
-  background: var(--paper);
-  border-color: var(--line);
+  background: var(--cream);
+  border-color: rgba(18, 56, 43, 0.18);
   box-shadow: var(--shadow-lift);
 }
 .case-next-panel:focus-visible { outline: 2px solid var(--evergreen); outline-offset: 3px; }
 
-/* oversized brand initial — faint continuation texture */
-.next-ghost {
+/* soft butter accent low-right — echoes the Contact section below About */
+.case-next-panel::after {
+  content: "";
   position: absolute;
-  right: clamp(-6px, 2vw, 28px);
-  bottom: -0.30em;
-  margin: 0;
   z-index: 0;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(150px, 26vw, 280px);
-  line-height: 1;
-  letter-spacing: -0.05em;
-  color: var(--evergreen);
-  opacity: 0.06;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: rgba(248, 220, 110, 0.32);
+  right: -80px; bottom: -110px;
   pointer-events: none;
-  transition: opacity 280ms ease, transform 280ms cubic-bezier(.22, .61, .36, 1);
+  transition: transform 400ms cubic-bezier(.22, .61, .36, 1);
 }
-.case-next-panel:hover .next-ghost { opacity: 0.09; transform: translateX(-8px); }
+.case-next-panel:hover::after { transform: scale(1.08) translate(-6px, -8px); }
 
 .next-lead { position: relative; z-index: 1; }
 .next-eyebrow {
@@ -1264,11 +1263,11 @@ a { color: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
   .case-next-panel,
-  .case-next-panel .next-ghost,
+  .case-next-panel::after,
   .case-next-panel .next-disc,
   .case-next-panel .next-cta .arw { transition: none; }
   .case-next-panel:hover { transform: none; }
-  .case-next-panel:hover .next-ghost,
+  .case-next-panel:hover::after,
   .case-next-panel:hover .next-disc,
   .case-next-panel:hover .next-cta .arw { transform: none; }
 }
