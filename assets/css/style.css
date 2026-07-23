@@ -76,6 +76,18 @@ a { color: inherit; }
   text-transform: uppercase;
   color: var(--ink-soft);
 }
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  opacity: 0.55;
+  vertical-align: middle;
+  margin-right: 11px;
+  transform: translateY(-1px);
+}
 
 .muted { color: var(--ink-soft); }
 
@@ -344,7 +356,9 @@ a { color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  transition: opacity 220ms ease;
 }
+.logo-item:hover { opacity: 0.72; }
 .logo-item .sq {
   width: 12px; height: 12px;
   border-radius: 4px;
@@ -354,6 +368,9 @@ a { color: inherit; }
 
 /* ---------- sections ---------- */
 .section { padding: clamp(64px, 9vw, 110px) 0 0; }
+/* gentle rhythm variation — the personal sections breathe a little more */
+#about { padding-top: clamp(76px, 10vw, 126px); }
+#contact { padding-top: clamp(72px, 9.5vw, 118px); }
 
 .sec-header {
   max-width: 620px;
@@ -384,10 +401,12 @@ a { color: inherit; }
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(30px, 3.4vw, 42px);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   font-variant-numeric: tabular-nums;
-  line-height: 1.05;
+  line-height: 1.02;
 }
+/* let each brand's lead metric carry a touch more weight */
+.car-metrics .bento-cell:first-child .num { font-size: clamp(34px, 4vw, 50px); }
 .bento-cell .lbl {
   font-family: var(--font-display);
   font-weight: 700;
@@ -482,10 +501,17 @@ a { color: inherit; }
   color: var(--evergreen);
   text-decoration: none;
   margin-top: 6px;
-  border-bottom: 2px solid var(--butter);
-  padding-bottom: 2px;
+  padding-bottom: 3px;
+  background-image: linear-gradient(var(--butter), var(--butter));
+  background-repeat: no-repeat;
+  background-position: 0 92%;
+  background-size: 100% 2px;
+  transition: background-size 260ms cubic-bezier(.22, .61, .36, 1);
 }
-.car-link:hover { border-bottom-color: var(--evergreen); }
+.car-link:hover { background-size: 100% 42%; }
+@media (prefers-reduced-motion: reduce) {
+  .car-link { transition: none; }
+}
 .car-metrics {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -549,11 +575,12 @@ a { color: inherit; }
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  transition: transform 260ms cubic-bezier(.22, .61, .36, 1), box-shadow 260ms ease, border-color 260ms ease;
 }
 .funnel-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-lift);
+  border-color: rgba(18, 56, 43, 0.16);
 }
 .funnel-cap {
   height: 110px;
@@ -580,6 +607,15 @@ a { color: inherit; }
   border-radius: 50%;
   right: 18px; top: -26px;
   background: rgba(255, 255, 255, 0.4);
+  transition: transform 360ms cubic-bezier(.22, .61, .36, 1);
+}
+.funnel-card:hover .funnel-cap::after { transform: scale(1.14); }
+/* win over .reveal's transition so hover eases (not snaps) while keeping the entrance fade */
+.funnel .funnel-card {
+  transition: opacity 480ms cubic-bezier(.22, .8, .3, 1),
+              transform 300ms cubic-bezier(.22, .61, .36, 1),
+              box-shadow 300ms ease,
+              border-color 300ms ease;
 }
 .cap-peri { background: var(--peri-soft); }
 .cap-butter { background: var(--butter-soft); }
@@ -754,6 +790,12 @@ a { color: inherit; }
   border-radius: 999px;
   background: var(--paper);
   border: 1px solid var(--line);
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+.chip:hover {
+  border-color: var(--peri);
+  background: var(--peri-soft);
+  transform: translateY(-1px);
 }
 
 /* ---------- contact ---------- */
