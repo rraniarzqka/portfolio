@@ -2216,7 +2216,14 @@ p.case-callout {
 .hm-hero { overflow: hidden; }
 .home .hm-hero-title { margin: 18px 0 46px; }
 .hm-arch { width: min(530px, 84vw); }
-.hm-arch-photo img { object-position: center 18%; transform: scale(1.26); transform-origin: center 34%; }
+/* full-body studio shots: the source is narrower than the arch, so cover
+   shows the full width and crops vertically — anchor near the bottom to
+   drop the empty headroom and sit the subject centred in the frame */
+.hm-arch-photo img {
+  object-position: center bottom;
+  transform: scale(1.08);
+  transform-origin: center bottom;
+}
 
 .hm-hero-deco .hsb1 { width: 330px; height: 330px; background: var(--cr-pink-light); right: 2%; top: -6%; opacity: 0.4; }
 .hm-hero-deco .b1 { width: 104px; height: 104px; right: 1%; top: 12%; }
