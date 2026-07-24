@@ -1753,7 +1753,7 @@ p.case-callout {
 .hm-hero-title {
   font-family: var(--hm-display);
   font-weight: 700;
-  font-size: clamp(44px, 8.2vw, 104px);
+  font-size: clamp(40px, 7.4vw, 92px);
   line-height: 0.92;
   text-transform: uppercase;
   margin: 18px 0 22px;
@@ -2215,7 +2215,7 @@ p.case-callout {
 /* ---- hero ---- */
 .hm-hero { overflow: hidden; }
 .home .hm-hero-title { margin: 18px 0 46px; }
-.hm-arch { width: min(530px, 84vw); }
+.hm-arch { width: min(480px, 82vw); }
 /* full-body studio shots: the source is narrower than the arch, so cover
    shows the full width and crops vertically — anchor near the bottom to
    drop the empty headroom and sit the subject centred in the frame */
@@ -2225,7 +2225,7 @@ p.case-callout {
   transform-origin: center bottom;
 }
 /* About: sit the portrait a little lower in the arch */
-.hm-about-figure .hm-arch-photo img { object-position: center 84%; }
+.hm-about-figure .hm-arch-photo img { object-position: center 74%; }
 
 .hm-hero-deco .hsb1 { width: 330px; height: 330px; background: var(--cr-pink-light); right: 2%; top: -6%; opacity: 0.4; }
 .hm-hero-deco .b1 { width: 104px; height: 104px; right: 1%; top: 12%; }
