@@ -2256,3 +2256,8 @@ p.case-callout {
   .hm-about-deco { display: none; }
   .home .hm-hero-title { margin: 14px 0 32px; }
 }
+
+/* preview-card metric label: ink instead of the old pale sage (#AFC4B9),
+   which was left over from the dark-green design and washed out on the
+   light chartreuse cell */
+.home .car-metrics .bento-green .lbl { color: var(--cr-ink); }
