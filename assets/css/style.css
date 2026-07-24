@@ -2224,6 +2224,8 @@ p.case-callout {
   transform: scale(1.08);
   transform-origin: center bottom;
 }
+/* About: sit the portrait a little lower in the arch */
+.hm-about-figure .hm-arch-photo img { object-position: center 84%; }
 
 .hm-hero-deco .hsb1 { width: 330px; height: 330px; background: var(--cr-pink-light); right: 2%; top: -6%; opacity: 0.4; }
 .hm-hero-deco .b1 { width: 104px; height: 104px; right: 1%; top: 12%; }
