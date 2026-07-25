@@ -1906,7 +1906,7 @@ p.case-callout {
 .hm-status-dot { position: relative; width: 10px; height: 10px; border-radius: 50%; background: var(--cr-green-dark); flex: none; }
 .hm-status-dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: inherit; animation: hmPulse 2.4s ease-out infinite; }
 @keyframes hmPulse { 0% { transform: scale(1); opacity: 0.5; } 70%, 100% { transform: scale(2.8); opacity: 0; } }
-.hm-contact-title { font-family: var(--hm-display); font-weight: 600; font-size: clamp(30px, 4.5vw, 52px); margin: 18px 0 12px; max-width: 20ch; }
+.home .hm-contact-title { font-family: var(--hm-display); font-weight: 600; font-size: clamp(30px, 4.5vw, 52px); margin: 18px 0 18px; max-width: 20ch; }
 .hm-contact-lede { font-size: 15px; opacity: 0.85; max-width: 52ch; }
 .hm-contact-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
 
