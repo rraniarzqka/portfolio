@@ -1921,12 +1921,14 @@ p.case-callout {
 /* ---- responsive ---- */
 @media (max-width: 900px) {
   .hm-hero-inner { grid-template-columns: 1fr; gap: 30px; }
-  .hm-hero-figure { justify-self: start; }
+  /* once stacked, centre the portrait so it stays balanced (was left-
+     aligned, which left a large dead gap on tablet widths) */
+  .hm-hero-figure { justify-self: center; }
   .hm-disc-grid { grid-template-columns: 1fr; }
   .home .car-slide { grid-template-columns: 1fr; }
   .home .car-metrics { grid-template-columns: 1fr 1fr; }
   .hm-about-grid { grid-template-columns: 1fr; }
-  .hm-about-figure { justify-self: start; }
+  .hm-about-figure { justify-self: center; }
 }
 @media (max-width: 820px) {
   .hm-links {
