@@ -8,3 +8,9 @@
 # Editor/OS cruft
 *.swp
 Thumbs.db
+
+# Loose source originals / duplicates — the optimized copies live in assets/
+HERO.jpeg
+DSC06800.jpeg
+Certification Rania Rizqika All.pdf
+Rania_Rizqika_Maharani_CV .pdf
