@@ -1,0 +1,57 @@
+/* PRENAGEN overview and its three samples share the same rose palette. */
+.prenagen-page,.prenagen-sample-page{--pn-rose:#f6cfdf;--pn-soft:#fceaf1;--pn-panel:#f5d9e4;--pn-border:#dda9c0;--pn-plum:#783d62;--accent:#356779;--line:#e6bfd1}
+.prenagen-page .preview,.prenagen-sample-page .preview{background:var(--pn-panel);color:var(--pn-plum)}
+.prenagen-page nav .contact,.prenagen-sample-page nav .contact{background:#fff1f6;border-color:var(--pn-border);color:var(--pn-plum)}
+.prenagen-page .project-switch>div{background:#f7e2ec;border-color:var(--pn-border)}
+.prenagen-page .project-switch a:hover:not(.selected){background:#f0c8db}
+.prenagen-page .pn-sample-image,.prenagen-page .pn-sample-image-2,.prenagen-page .pn-sample-image-3{background:var(--pn-rose)}
+.prenagen-page .as-tags span{border-color:var(--pn-border);color:var(--pn-plum)}
+.prenagen-sample-page .article-hero h1>span,.prenagen-sample-page .baby-hero h1>span{color:var(--pn-plum)}
+.prenagen-sample-page .article-cover,.prenagen-sample-page .baby-headline,.prenagen-sample-page .optimization-poster{background:var(--pn-rose);border-color:var(--pn-border);box-shadow:5px 7px 0 #efc7d855}
+.prenagen-sample-page .optimization-poster b:first-child,.prenagen-sample-page .baby-headline b:first-child{color:var(--pn-plum)}
+.prenagen-sample-page .optimization-poster>p{color:#67505f}
+.prenagen-sample-page .optimization-poster>strong,.prenagen-sample-page .baby-headline strong{background:#fff6fa;border:1px solid #d9a2ba;color:var(--pn-plum)}
+.prenagen-sample-page .article-stamp{border-color:var(--pn-border);box-shadow:3px 4px 0 #dca5bf66}
+.prenagen-sample-page .baby-results{background:var(--pn-soft)}
+.prenagen-sample-page .baby-result-grid>article{border-color:#e1bbcd;box-shadow:3px 5px 0 #ead4df66}
+.prenagen-sample-page .baby-result-grid b,.prenagen-sample-page .article-metrics article>b{color:var(--pn-plum)}
+.prenagen-sample-page .baby-result-grid .position-summary{background:#f5d9e4}
+.prenagen-sample-page .tiny-bars i{background:#edbed2}
+.prenagen-sample-page .tiny-bars i:last-child{background:#a35b7b}
+.prenagen-sample-page .results-reading,.prenagen-sample-page .optimization-reading,.prenagen-sample-page .trend-panel,.prenagen-sample-page .article-outcomes>div{border-color:#ddb1c6}
+.prenagen-sample-page .results-reading>span,.prenagen-sample-page .article-outcomes>div>span{color:#985477}
+.prenagen-sample-page .baby-evidence{background:#f8dce8}
+.prenagen-sample-page .evidence-card{border-color:#dbaac0}
+.prenagen-sample-page .evidence-top,.prenagen-sample-page .after .evidence-top{background:#fff2f7;border-color:#e6c0d2}
+.prenagen-sample-page .after .evidence-top{background:#f3c9da}
+.prenagen-sample-page .evidence-switch>button,.prenagen-sample-page .close-tabs button{border-color:#cba0b5}
+.prenagen-sample-page .evidence-switch .selected,.prenagen-sample-page .close-tabs .selected{background:var(--pn-plum);border-color:var(--pn-plum);color:#fff}
+.prenagen-sample-page .article-work,.prenagen-sample-page .optimization-work{background:var(--pn-panel)}
+.prenagen-sample-page .article-work .close-visual{background:#efbfd3}
+.prenagen-sample-page .close-detail{border-color:var(--pn-border)}
+.prenagen-sample-page .deliverable{background:#fbe7f0;border-color:#deb2c7}
+.prenagen-sample-page .kw-track{background:#f8e3ed}
+.prenagen-sample-page .kw-track>i{background:#a35b7b}
+.prenagen-sample-page .kw-row b{color:var(--pn-plum)}
+.prenagen-sample-page .brief-pills span{background:var(--pn-plum);border-color:#67314f;color:#fff}
+.prenagen-sample-page .outline-row,.prenagen-sample-page .edit-flow>b{background:#f4d7e4;color:#573148}
+.prenagen-sample-page .outline-row>span{color:#874a69}
+.prenagen-sample-page .baby-actions .action-four>article,.prenagen-sample-page .baby-actions .action-four>article:nth-child(n){background:#fff5f9;border-color:#d8b0c3;border-top-color:#b36b8c;box-shadow:3px 5px 0 #ead4df66}
+.prenagen-sample-page .baby-actions .action-four>article:nth-child(2n){background:#f8e1ec;border-top-color:#8c4a6b}
+.prenagen-sample-page .baby-actions .keyword-list>span{background:var(--pn-plum);border-color:#67314f;color:#fff}
+.prenagen-sample-page .heading-demo>span{background:#ebbad0;border-color:#a35b7b;color:#4b2b3d}
+.prenagen-sample-page .title-demo,.prenagen-sample-page .cta-route{background:#fff;border:1px solid #dfb5c8}
+.prenagen-sample-page .zero-days{background:#f0c5d8}
+.prenagen-sample-page .zero-days>b{color:var(--pn-plum)}
+.prenagen-sample-page .trend-key i,.prenagen-sample-page .trend-bar{background:#dca8bf}
+.prenagen-sample-page .trend-key span:last-child i,.prenagen-sample-page .trend-column.after .trend-bar{background:#9c5577}
+.prenagen-sample-page .optimization-steps>article,.prenagen-sample-page .optimization-steps>article:nth-child(n){border-color:#ddb1c6;border-top-color:#ac6586;box-shadow:3px 5px 0 #d9b5c533}
+.prenagen-sample-page .structure-visual,.prenagen-sample-page .rewrite-visual,.prenagen-sample-page .metadata-visual,.prenagen-sample-page .answer-visual{background:#f4d5e2;border-color:#d5a3ba}
+.prenagen-sample-page .structure-visual>span{border-color:#d5a3ba}
+.prenagen-sample-page .metadata-visual>div{background:#bd7c9c}
+.prenagen-sample-page .metadata-visual>span,.prenagen-sample-page .rewrite-visual span,.prenagen-sample-page .rewrite-visual i,.prenagen-sample-page .answer-visual b,.prenagen-sample-page .optimization-steps>article>span{color:var(--pn-plum)}
+.prenagen-sample-page .btn.dark{background:var(--accent);border-color:var(--accent);box-shadow:3px 4px 0 #b8d6e1}
+.prenagen-sample-page .btn.dark:hover{background:#284f60;box-shadow:4px 6px 0 #a9cbd8}
+.prenagen-sample-page a:focus-visible,.prenagen-sample-page button:focus-visible,.prenagen-sample-page select:focus-visible{outline-color:var(--accent)}
+
+.prenagen-sample-page .close-visual-top>span{font-size:8px;letter-spacing:1.1px}

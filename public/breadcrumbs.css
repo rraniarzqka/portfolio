@@ -1,0 +1,13 @@
+/* Compact, accessible navigation through portfolio project pages. */
+.breadcrumb-wrap{padding-top:18px;padding-bottom:5px}
+nav.breadcrumbs{display:block;height:auto;min-height:0;max-width:none;margin:0;padding:0;border:0;background:transparent}
+.breadcrumbs ol{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;list-style:none;margin:0;padding:0;font-size:12px;line-height:1.65}
+.breadcrumbs li{display:flex;align-items:baseline;gap:10px;min-width:0;max-width:100%}
+.breadcrumbs a{color:#526575;text-decoration:none;text-underline-offset:4px;border-radius:3px}
+.breadcrumbs a:hover{text-decoration:underline;color:var(--accent)}
+.breadcrumbs a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.breadcrumbs [aria-current=page]{color:var(--ink);font-weight:600;overflow-wrap:anywhere}
+.breadcrumb-separator{color:#8b9da6;font-size:16px;line-height:1;flex-shrink:0;user-select:none}
+.breadcrumb-wrap+.project-switch{padding-top:17px}
+.breadcrumb-wrap+main>.article-hero:first-child,.breadcrumb-wrap+main>.baby-hero:first-child{padding-top:36px}
+@media(max-width:720px){.breadcrumb-wrap{padding-top:14px;padding-bottom:2px}.breadcrumbs ol{font-size:11px;gap:5px 8px}.breadcrumbs li{gap:8px}.breadcrumb-separator{font-size:15px}.breadcrumb-wrap+main>.article-hero:first-child,.breadcrumb-wrap+main>.baby-hero:first-child{padding-top:28px}}
