@@ -1,46 +1,29 @@
 # Rania Rizqika — Portfolio
 
-A hand-built, static portfolio site for Rania Rizqika (digital marketer).
-No framework and no build step — vanilla HTML, one CSS file, and one JS
-file. A playful, retro-inspired candy design system with a warm cream base,
-rounded borders, hard offset shadows, and Fredoka + Space Mono type.
+Live website: https://rraniazqka.netlify.app/
 
-## Structure
+The approved portfolio is a buildless static site in `public/`. Netlify reads
+`netlify.toml`, publishes only `public/`, and redeploys when `main` changes.
 
-- `index.html` — homepage (hero, brand marquee, "What I do", Featured Work
-  carousel, About, Contact).
-- `work/*.html` — six case studies: `prenagen`, `morinaga`, `ascott`
-  (The Ascott Limited), `taman-safari`, `havara`, `boleh-belajar`. Each
-  carries a per-page candy theme class (`c-purple`, `c-chartreuse`, …).
-- `assets/css/style.css` — the single stylesheet for every page.
-- `assets/js/main.js` — the single script (one IIFE): sticky nav, mobile
-  menu, scroll reveals, metric count-ups, and the auto-slide carousel.
-- `assets/img/` — images, plus the CV and certification PDFs.
+## Editing
 
-## Local preview
+Use the approved `Website/` source folder from the owner’s local project.
+Copy approved updates into `public/` for the next release. Keep local project
+notes, backups, and raw source reports outside `public/`.
 
-There's no build. Open `index.html` in a browser, or serve the folder with
-any static server, e.g.:
+Preview with `python3 -m http.server 4187 --directory public`.
+Update CSS/JS version query strings when changing those files.
 
-```bash
-python3 -m http.server 4173
-# then visit http://localhost:4173
-```
+## Navigation and retained files
 
-### CSS cache-busting
+The homepage links to PRENAGEN, Ascott, Taman Safari, Havara Studio and Boleh Belajar.
+The three brand overviews link to their detailed work samples. Inner pages have
+breadcrumbs. `_redirects` retains the old `/work/*.html` links.
+Certification and CV PDFs remain at their existing `/assets/` URLs.
+The existing noindex,nofollow policy is retained.
 
-Every HTML file links the stylesheet with a version query
-(`style.css?v=N`). After editing `style.css`, bump `N` in all HTML files so
-browsers don't serve a stale cache:
+## Previous version
 
-```bash
-for f in index.html work/*.html; do
-  sed -i '' 's|style.css?v=OLD|style.css?v=NEW|' "$f"
-done
-```
-
-## Deployment
-
-Deployed on Netlify from this repository as a plain static site (no build
-command; publish directory is the repo root). Pushes to `main` trigger an
-automatic redeploy.
+The previous site is preserved in Git commit
+`1da6bef5a0cad9ca8fba6f09bcba31f7289ea5fd` and in the local release backup.
+The older root HTML/assets are legacy source and are not published by Netlify.

@@ -1,0 +1,8 @@
+const pmTabs=Array.from(document.querySelectorAll('[role="tab"][data-panel]'));
+function pmSelect(tab,focus=false){pmTabs.forEach(button=>{const selected=button===tab;button.setAttribute('aria-selected',String(selected));button.tabIndex=selected?0:-1;document.getElementById(button.dataset.panel).hidden=!selected;});if(focus)tab.focus();}
+pmTabs.forEach((tab,index)=>{tab.addEventListener('click',()=>pmSelect(tab));tab.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(index+1)%pmTabs.length;else if(event.key==='ArrowLeft')next=(index+pmTabs.length-1)%pmTabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=pmTabs.length-1;else return;event.preventDefault();pmSelect(pmTabs[next],true);});});
+if(pmTabs.length)pmSelect(pmTabs.find(t=>t.getAttribute('aria-selected')==='true')||pmTabs[0]);
+const pmZoom=document.getElementById('pm-zoom');
+document.querySelectorAll('[data-zoom]').forEach(button=>button.addEventListener('click',()=>{const image=pmZoom.querySelector('img');image.src=button.dataset.zoom;image.alt=button.querySelector('img').alt;document.getElementById('pm-zoom-title').textContent=button.dataset.title;pmZoom.showModal();pmZoom.scrollTop=0;}));
+pmZoom.querySelector('button').addEventListener('click',()=>pmZoom.close());
+document.querySelectorAll('[data-video]').forEach(button=>button.addEventListener('click',()=>{const container=button.closest('[data-video-container]');const frame=document.createElement('iframe');frame.src=button.dataset.video;frame.title='Havara Studio original awareness video';frame.className='pm-video-frame';frame.allow='autoplay; fullscreen';frame.allowFullscreen=true;container.replaceWith(frame);}));

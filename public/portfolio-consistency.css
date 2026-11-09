@@ -1,0 +1,123 @@
+/* Shared finish: direct copy, readable contrast, and distinct work steps. */
+:root{--accent:#356779;--green:#cdebdc;--line:#d7e2e7}
+.preview,.pm-page .preview,.ts-brand .preview{background:#cfe8ee;color:#365d6b}
+nav .contact{background:#e5f2f6;border-color:#abcbd5;color:#315d6c}
+.btn.dark{box-shadow:3px 4px 0 #b8d6e1}
+.btn.dark:hover{background:#284f60;box-shadow:4px 6px 0 #a9cbd8}
+a:focus-visible,button:focus-visible,select:focus-visible{outline-color:var(--accent)}
+.project-switch>div,.pm-page .project-switch>div,.ts-brand .project-switch>div,.sf-sample-nav>div{background:#dcecf1;border:1px solid #b4cfda}
+.project-switch a:hover:not(.selected){background:#c8e1e9}
+.client-pill,.pm-page .client-pill,.ts-brand .client-pill{background:#fff;border-color:#abc6d1;color:#3c6373}
+.close-tabs .selected,.pm-tabs [aria-selected=true],.sf-chart button.selected{background:var(--accent);border-color:var(--accent);color:#fff}
+.pn-context>article{background:#fff;border:1px solid #c9dce3;border-radius:16px;padding:22px}
+.pn-contribution,.as-intro .pn-contribution{background:#c9e6ef;border-color:#a3cbd9}
+.pn-tags span,.pm-context .pn-tags span,.as-intro .pn-tags span,.as-tags span,.sample-tags span{background:#fff;border-color:#a8c8d3;color:#315768}
+.pn-index{color:#376477}
+.pn-brand-performance{background:#e5f1f5}
+.pn-brand-card{background:#cfe8ee}
+.pn-brand-card.pn-ai-campaign{background:#f8d4e1}
+.prenagen-intro .pn-contribution{background:#c9e6ef;border-color:#a4cbd9}
+.prenagen-intro .pn-contribution .pn-index{background:#fff;color:#356779}
+.prenagen-intro .pn-tags span{border-color:#a7cbd9}
+.selected-sample:nth-child(3) .sample-art{background:#f4c6b3}
+.sample-section h2>span{color:var(--ink)}
+/* Brand overviews use their own color accents. */
+.as-hero{padding:30px;border:1px solid #a4cbd9;border-radius:24px;background:#c9e6ef;margin-bottom:28px}
+.as-cover{border-color:#9cc2d1;background:#e5f2f6;box-shadow:5px 7px 0 #93bbcb66}
+.as-performance-grid article:first-child{background:#b9dce8}
+.as-performance-grid article:nth-child(2){background:#cdebdc}
+.as-performance-grid article:nth-child(3){background:#f6d795}
+.as-samples{background:#deedf2}
+.as-card{border-color:#afced9}
+.as-card-image{background:#b9dce8;border-bottom-color:#b3cfd9}
+.as-number{background:var(--ink);border-color:#fff;color:#fff}
+.as-card-action,.sd-read,.project-open,.sample-read{border-top-color:#b5ccd6}
+.ts-brand{--accent:#376953}
+.ts-brand .as-hero{background:#cfe8d9;border-color:#a0c5ae}
+.ts-brand .as-intro .pn-contribution{background:#c2e2cf;border-color:#9dc4ab}
+.ts-brand .as-samples{background:#dceee3}
+.ts-brand .as-cover{background:#e8f4ed;border-color:#9dc4ab}
+.ts-performance-grid>article:first-child{background:#f6dfaa}
+.ts-performance-grid>article:nth-child(2){background:#c7e5d3}
+/* Page studies retain their existing order and evidence. */
+.baby-results{background:#e0f0ea}
+.as-detail-page .baby-results{background:#deedf2}
+.article-work{background:#d8edf3}
+.article-work .close-visual{background:#f5d28c}
+.as-detail-page .article-cover{background:#b9dce8;border-color:#9bc4d2}
+.walkway-route{background:#b9dce8;border-color:#95becc}
+.walkway-route>div{border-color:#9fc5d3}
+.walkway-output{background:#d6eaf1;border-color:#a8cbd8}
+.citadines-work-panel{border-color:#9ec5d3}
+.citadines-work-visual{background:#b9dce8}
+.citadines-kw-row,.citadines-meta,.citadines-copy{border-color:#92b9c9}
+.citadines-browser-bar{background:#c6e3ee;color:#356779}
+.citadines-search-layer{border-color:#83adbe;box-shadow:5px 7px 0 #83adbe44}
+.citadines-chart-key span+span i{background:#b36d34}
+.shinjuku-prompt-section{background:#f4d99f}
+.shinjuku-prompt-section blockquote{border-color:#b47b2c}
+.shinjuku-intent-tags span{border-color:#c9a46a;color:#69502f}
+.shinjuku-plan dl{background:#cce6ee;border-color:#a5cbd8}
+.shinjuku-proof-grid article+article{background:#cce6ee;border-color:#9ec6d5}
+/* Work steps have full borders and consistent numbered headers. */
+.walkway-work-grid>article,.sf-work-grid>article,.optimization-steps>article,.shinjuku-proof-grid>article{border:1px solid #b8cdd6;border-top:5px solid #71a58c;border-radius:16px;box-shadow:3px 5px 0 #d5e4e966}
+.walkway-work-grid>article:nth-child(2),.sf-work-grid>article:nth-child(2),.optimization-steps>article:nth-child(2){border-top-color:#6fa1b7}
+.walkway-work-grid>article:nth-child(3),.sf-work-grid>article:nth-child(3),.optimization-steps>article:nth-child(3){border-top-color:#d2a044}
+.optimization-steps>article:nth-child(4){border-top-color:#cf7d99}
+.sf-work,.sd-work{background:#d6e9dd}
+.sf-mini{background:#fff;border-color:#98bda8}
+.sf-work-grid>article{background:#fff}
+.sf-results,.sd-results{background:#dceee3}
+.sf-hero-note{background:#f5d28c;border-color:#d5aa59}
+/* Keyword and other small boxes remain readable against their panels. */
+.keyword-list>span{background:#376953;color:#fff;border:1px solid #2c5643;font-weight:500}
+.brief-pills span{background:#356779;color:#fff;border:1px solid #2d5766}
+.heading-demo>span{background:#c7e2ec;border-color:#427a90;color:#243e4d}
+.outline-row,.edit-flow>b{background:#d1e9de;color:#294b3c}
+.sf-mini>span{border:1px solid #bfd7c8;background:#e5f2e9;border-radius:5px;padding:7px;color:#294b3c}
+.pm-page{--pm-tint:#f8dfc1;--pm-border:#dfbb8b;--pm-accent:#92552b;--pm-soft:#c5e1d1;--accent:#92552b}
+.pm-boleh{--pm-tint:#d6eaf2;--pm-border:#a4c7d8;--pm-accent:#32657b;--pm-soft:#bedde9;--accent:#32657b}
+.pm-hero{padding:30px;border:1px solid var(--pm-border);border-radius:24px;background:var(--pm-tint);margin-bottom:30px}
+.pm-context .pn-contribution{background:var(--pm-tint);border-color:var(--pm-border)}
+.pm-hero-tags>span{background:#fff;border-color:var(--pm-border);color:var(--pm-accent)}
+.pm-tabs button{background:#fff;border:1px solid var(--pm-border);border-top:4px solid var(--pm-accent)}
+.pm-tabs [aria-selected=true]{background:var(--pm-accent);border-color:var(--pm-accent)}
+.pm-budget span:first-child{background:#f5d28c;color:#624622}
+.pm-budget span:nth-child(2){background:#efb2c9;color:#6b344b}
+.pm-budget span:nth-child(3){background:#a9d0bb;color:#294b3c}
+.pm-keyword-group{border-color:#91b8ca;border-left:5px solid #477f96}
+.pm-copy-benefits span,.pm-board-pills span{background:#fff;border-color:#8db4c6;color:#31576a}
+.pm-message-path>strong{border-color:#93bba6;background:#c4e2d1;color:#294b3c}
+.pm-hero-image,.pm-havara .pm-hero-image{background:#fff4e1;border-color:#d8b48b;box-shadow:5px 7px 0 #d8b48b55}
+.pm-search-poster{background:#acd2e3;border-color:#82adc0}
+.pm-poster-stamp{background:#c2e1cf;color:#294b3c}
+/* Homepage keeps the approved introduction and content/paid balance. */
+.home-page .section-top h2 span{color:#356779}
+.home-page .hero-copy .eyebrow{color:#426476}
+.home-page .home-about-clean:before{background:#dceef3;border-color:#b5d2de}
+.home-page .about-heading .about-section-number{background:#a9d0de;color:#315768}
+.home-page .about-copy{border-color:#afcfdb;box-shadow:4px 6px 0 #bed9e3}
+.home-page .about-copy .tool-tags span{background:#cce6ef;border-color:#9dbfce;color:#294a5a}
+.home-page .about-copy .tool-tags span:nth-child(3n+2){background:#cde5d7;border-color:#a4c4b1}
+.home-page .about-copy .tool-tags span:nth-child(3n){background:#f3ccdc;border-color:#d8a7bd}
+.home-page .about-copy .text-link{color:#315f72;border-color:#8bb5c8}
+.home-page .about-journey{background:#efb8ce;color:#71364d}
+.home-page .about-data{background:#a9d6e5;color:#315769}
+.home-page .about-certifications{background:#c9e4ee;border-color:#9ebfce;color:#315768;box-shadow:2px 3px 0 #bad4df}
+.home-page .about-certifications:hover{background:#b7d9e6}
+.home-page .result-sticker.green{background:#cfe7dc}
+.home-page .lavender{background:#c7e2ec}
+/* Preserve the warm palette already approved for the optimization sample. */
+.optimization-page{--accent:#ad4c3d}
+.optimization-page .baby-results{background:#fff0e5}
+.optimization-page .optimization-work{background:#f8d6c8}
+.optimization-page .optimization-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}
+.article-metrics{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1000px){.article-metrics{grid-template-columns:1fr 1fr}}
+@media(max-width:720px){.as-hero,.pm-hero{padding:23px 19px;border-radius:20px;gap:28px}.as-cover{width:96%}.pm-hero-image{width:96%;margin:auto}.optimization-page .optimization-metrics{grid-template-columns:1fr}.walkway-work-grid,.sf-work-grid,.optimization-steps,.shinjuku-proof-grid{gap:18px}.as-hero h1,.pm-hero h1{overflow-wrap:break-word}}
+
+.as-detail-page .article-hero h1 span{color:#32657b}
+.pm-hero{width:calc(100% - 48px);max-width:1108px}
+
+/* Shinjuku editorial steps share the Content Brief card color. */
+.shinjuku-work .shinjuku-proof-grid>article+article{background:#fff1d2;border-color:#b8cdd6;border-top-color:#71a58c}

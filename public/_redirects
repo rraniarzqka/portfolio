@@ -1,0 +1,13 @@
+# Keep existing shared portfolio links working.
+/work/prenagen.html  /results.html?project=prenagen  301
+/work/prenagen  /results.html?project=prenagen  301
+/work/ascott.html  /ascott.html  301
+/work/ascott  /ascott.html  301
+/work/taman-safari.html  /taman-safari.html  301
+/work/taman-safari  /taman-safari.html  301
+/work/havara.html  /havara.html  301
+/work/havara  /havara.html  301
+/work/boleh-belajar.html  /boleh-belajar.html  301
+/work/boleh-belajar  /boleh-belajar.html  301
+/work/morinaga.html  /index.html#work  301
+/work/morinaga  /index.html#work  301
