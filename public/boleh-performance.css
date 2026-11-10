@@ -1,0 +1,60 @@
+/* Boleh Belajar campaign totals and ad-group comparison. */
+.pm-boleh .bb-headline-metrics{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:24px}
+.pm-boleh .bb-headline-metrics article{padding:24px}
+.pm-boleh .bb-headline-metrics strong{font-size:42px}
+.pm-boleh .bb-headline-metrics article:first-child{background:#dceee3;border-color:#9dc4ab}
+.pm-boleh .bb-headline-metrics article:first-child strong{color:#376953}
+.bb-overall{background:#fff;border:1px solid #abcbd5;border-radius:16px;overflow:hidden;margin-top:24px}
+.bb-overall-heading{padding:26px 28px 18px;display:flex;align-items:baseline;justify-content:space-between;gap:20px}
+.bb-overall h3,.bb-groups-heading h3{font-size:29px;line-height:1.15;margin:0;letter-spacing:-.5px}
+.bb-overall-heading>p{font-size:11px;color:#62677e;margin:0}
+.bb-table-wrap{overflow-x:auto}
+.bb-overall table{width:100%;border-collapse:collapse;text-align:left;font-size:12px}
+.bb-overall th,.bb-overall td{padding:17px 28px;border-bottom:1px solid #e2ebee;vertical-align:middle}
+.bb-overall thead{background:#e7f2f5;color:#315d6c}
+.bb-overall thead th{font-size:10px;font-weight:600;letter-spacing:.3px;white-space:nowrap}
+.bb-overall tbody th{font-weight:500}
+.bb-overall td:nth-child(3){font-weight:700}
+.bb-comparison{display:inline-block;padding:5px 10px;border-radius:20px;background:#f0f3f5;font-size:10px;white-space:nowrap;color:#4f596a}
+.bb-comparison-positive{background:#dceee3;color:#376953}
+.bb-result-reading{padding:20px 28px 24px;display:flex;align-items:flex-start;gap:13px;background:#f5f9fa}
+.bb-result-reading>span{font-size:24px;color:#356779;line-height:1}
+.bb-result-reading p{font-size:12px;line-height:1.85;margin:0;color:#535d73;max-width:790px}
+.bb-groups-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin:42px 0 20px}
+.bb-groups-heading p{font-size:11px;line-height:1.8;color:#535d73;max-width:410px;margin:0}
+.bb-group-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.bb-group{background:#fff;border:1px solid #abcbd5;border-top:5px solid #70a68b;border-radius:14px;padding:25px;min-width:0;display:flex;flex-direction:column;box-shadow:3px 4px 0 #bdd3dc4d}
+.bb-group-competitor{border-top-color:#a2afbd}
+.bb-group-generic{border-top-color:#d8ac58}
+.bb-group-title{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.bb-group-title h4{font-size:26px;line-height:1.15;margin:0;letter-spacing:-.4px}
+.bb-active-days{font-size:10px;color:#62677e;white-space:nowrap}
+.bb-group-status{font-size:10px;color:#376953;line-height:1.6;margin:10px 0 23px}
+.bb-group-competitor .bb-group-status{color:#62677e}
+.bb-group-generic .bb-group-status{color:#866124}
+.bb-group-conversions{border-bottom:1px solid #dce7eb;padding-bottom:19px;margin-bottom:18px}
+.bb-group-conversions strong{font:46px/1 'Fredoka';letter-spacing:-1px;color:#376953;display:block;margin-bottom:6px}
+.bb-group-competitor .bb-group-conversions strong{color:#62677e}
+.bb-group-conversions span{font-size:11px;color:#535d73}
+.bb-group-data{display:grid;grid-template-columns:1fr 1fr;gap:17px 12px;margin:0 0 23px}
+.bb-group-data>div{min-width:0}
+.bb-group-data dt{font-size:9px;color:#62677e;margin:0 0 6px;line-height:1.5}
+.bb-group-data dd{font-size:14px;font-weight:600;margin:0;white-space:nowrap}
+.bb-click-volume{grid-column:1/-1}
+.bb-click-caption{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.bb-click-track{height:7px;border-radius:8px;background:#e7eff2;margin-top:9px;overflow:hidden}
+.bb-click-track>span{display:block;height:100%;background:#70a68b;border-radius:8px}
+.bb-group-competitor .bb-click-track>span{background:#a2afbd}
+.bb-group-generic .bb-click-track>span{background:#d8ac58}
+.bb-keyword-highlight{background:#edf6f0;border:1px solid #c9e0d2;border-radius:9px;padding:15px;margin-top:auto}
+.bb-group-competitor .bb-keyword-highlight{background:#f2f5f7;border-color:#dce3e9}
+.bb-group-generic .bb-keyword-highlight{background:#fff4dc;border-color:#ead6a7}
+.bb-keyword-highlight>span{font-size:9px;color:#62677e;display:block;margin-bottom:8px}
+.bb-keyword-highlight p{font-size:12px;font-weight:600;line-height:1.6;margin:0 0 8px;overflow-wrap:anywhere}
+.bb-keyword-highlight small{font-size:9px;color:#535d73;line-height:1.8;display:block}
+.bb-budget-decision{display:flex;gap:16px;margin-top:21px;padding:20px 23px;border:1px solid #abcbd5;background:#fff;border-radius:11px}
+.bb-budget-decision>span{font:28px/1 'Fredoka';color:#356779}
+.bb-budget-decision h4{font-size:19px;margin:0 0 7px;line-height:1.2}
+.bb-budget-decision p{font-size:12px;color:#535d73;line-height:1.85;margin:0;max-width:810px}
+@media(max-width:1050px){.pm-boleh .bb-headline-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.bb-group{padding:20px}.bb-group-title{display:block}.bb-active-days{display:block;margin-top:8px}.bb-group-data dd{font-size:12px}.bb-overall th,.bb-overall td{padding:16px 20px}}
+@media(max-width:720px){.pm-boleh .bb-headline-metrics{grid-template-columns:1fr 1fr;gap:12px}.pm-boleh .bb-headline-metrics article{padding:20px 16px}.pm-boleh .bb-headline-metrics strong{font-size:34px}.pm-boleh .bb-headline-metrics h3{font-size:11px}.pm-boleh .bb-headline-metrics p{font-size:9px}.bb-overall-heading,.bb-groups-heading{display:block}.bb-overall-heading{padding:23px 20px 17px}.bb-overall-heading>p{margin-top:10px;line-height:1.6}.bb-overall h3,.bb-groups-heading h3{font-size:26px}.bb-overall table{font-size:11px;min-width:520px}.bb-overall th,.bb-overall td{padding:15px 18px}.bb-result-reading{padding:20px;gap:10px}.bb-result-reading p{font-size:11px}.bb-groups-heading{margin-top:32px}.bb-groups-heading p{margin-top:13px}.bb-group-grid{grid-template-columns:1fr;gap:18px}.bb-group{padding:24px}.bb-group-title{display:flex}.bb-active-days{margin:0}.bb-group-data dd{font-size:15px}.bb-group-conversions strong{font-size:43px}.bb-keyword-highlight small{font-size:10px}.bb-budget-decision{padding:20px;gap:12px}.bb-budget-decision p{font-size:11px}}
